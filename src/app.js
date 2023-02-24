@@ -14,13 +14,13 @@ window.onload = function() {
   getDomain(pronoum, adjt, subjet, extension);
 };
 const getDomain = (pronoum, adjt, subjet, extension) => {
-  for (let i = 0; i < pronoum.length; i++) {
-    for (let a = 0; a < adjt.length; a++) {
-      for (let e = 0; e < subjet.length; e++) {
-        for (let u = 0; u < extension.length; u++) {
-          console.log(`${pronoum[i]}${adjt[a]}${subjet[e]}${extension[u]}`);
-        }
-      }
-    }
-  }
+  pronoum.forEach(pron => {
+    adjt.forEach(adj => {
+      subjet.forEach(sub => {
+        extension.forEach(ext => {
+          console.log(`${pron}${adj}${sub}${ext}`);
+        });
+      });
+    });
+  });
 };
